@@ -45,14 +45,14 @@ struct CategorySelectorView: View {
                                 Color.red
                                     .cornerRadius(Constants.cornerRadius)
                                     .overlay {
-                                        RoundedCorner(radius: Constants.cornerRadius)
+                                        RoundedRectangle(cornerRadius: Constants.cornerRadius)
                                             .stroke(Color.red, lineWidth: 1)
                                     }
                             } else {
                                 Color.clear
                                     .cornerRadius(Constants.cornerRadius)
                                     .overlay {
-                                        RoundedCorner(radius: Constants.cornerRadius)
+                                        RoundedRectangle(cornerRadius: Constants.cornerRadius)
                                             .stroke(Color.red, lineWidth: 1)
                                     }
                             }
@@ -66,16 +66,6 @@ struct CategorySelectorView: View {
         }
         .padding(.vertical, 8)
         .accessibilityLabel(Constants.accessibilityLabel)
-    }
-}
-
-struct RoundedCorner: Shape {
-    var radius: CGFloat
-    var corners: UIRectCorner = .allCorners
-
-    func path(in rect: CGRect) -> Path {
-        .init(UIBezierPath(roundedRect: rect, byRoundingCorners: corners,
-                           cornerRadii: CGSize(width: radius, height: radius)).cgPath)
     }
 }
 

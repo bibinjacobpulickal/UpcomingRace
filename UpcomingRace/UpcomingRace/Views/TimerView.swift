@@ -31,10 +31,14 @@ struct TimerView: View {
             .frame(width: Constants.sideLength, height: Constants.sideLength)
             .background(Date(timeIntervalSince1970: seconds) > Date() ? .red : .black)
             .cornerRadius(Constants.cornerRadius)
+            .overlay {
+                RoundedRectangle(cornerRadius: Constants.cornerRadius)
+                    .stroke(Color.red, lineWidth: 1)
+            }
         }
     }
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    TimerView(seconds: Date().timeIntervalSince1970)
+    TimerView(seconds: Date().timeIntervalSince1970 + 5)
 }
