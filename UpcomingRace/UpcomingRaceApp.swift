@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct UpcomingRaceApp: App {
+    private let networkManager: NetworkManagerProtocol = NetworkManager.shared
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UpcomingRaceView(apiClient: UpcomingRaceAPIClient(networkManager: networkManager))
         }
     }
 }
