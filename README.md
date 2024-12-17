@@ -18,8 +18,8 @@ A simple app designed to show the upcoming races. Categories can be used to filt
     <td>Dark</td>
   </tr>
   <tr>
-    <td><img src="Screenshots/light.png" width=300 height=600></td>
-    <td><img src="Screenshots/dark.png" width=300 height=600></td>
+    <td><img src="Screenshots/light.png" width=270 height=600></td>
+    <td><img src="Screenshots/dark.png" width=270 height=600></td>
   </tr>
   <tr>
 </table>
